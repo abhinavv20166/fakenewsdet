@@ -1,0 +1,98 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fake News Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('about') }}">Fake News Classifier</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Welcome to the Fake News Classifier</h1>
+
+        <p>
+            Discover the truth behind news articles with our Fake News Classifier. This web application utilizes a machine learning model, specifically the Multinomial Naive Bayes algorithm, implemented in Python using the Scikit-learn library. The news articles are processed using Pandas DataFrames to facilitate efficient data manipulation.
+        </p>
+        <p class="disclaimer">
+            Disclaimer: This tool is designed for educational purposes only and should not be used as a sole determinant of the authenticity of news articles. While the algorithm is trained on a diverse dataset, it may not capture all nuances, and the results should be interpreted with caution.
+        </p>
+
+        <h2>Input Page:</h2>
+        <ul>
+            <li>
+                <p>
+                    Enter a news article in the text area below, and our system will leverage the power of Natural Language Processing (NLP) and machine learning to classify it as either fake or true. The backend Python code employs the Multinomial Naive Bayes algorithm, a popular choice for text classification tasks.
+                </p>
+            </li>
+            <li>
+                <p class="disclaimer">
+                    Disclaimer: The classification provided is based on patterns identified in the training data. It may not be foolproof, and the accuracy is subject to the quality and diversity of the training dataset. This tool should not be used as a substitute for critical thinking and fact-checking.
+                </p>
+            </li>
+        </ul>
+
+        <h2>Output Page:</h2>
+        <p>
+            The news has been classified! The backend Python code, backed by Scikit-learn, processes the input through a Multinomial Naive Bayes model trained on a dataset of labeled fake and true news articles. The result is a classification that provides insights into the reliability of the news content.
+        </p>
+        <p class="disclaimer">
+            Disclaimer: The classification is based on statistical analysis and may not be infallible. It is recommended to verify news from multiple sources and exercise critical thinking. This tool is not intended to replace human judgment or journalistic standards.
+        </p>
+    </div>
+        <!--for farah card -->
+        <div class="wrap animate pop">
+            <div class="overlay">
+                <div class="overlay-content animate slide-left delay-2">
+                    <h1 class="animate slide-left pop delay-4">Abhinav Venu</h1>
+                    <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">B.Sc <em>DSA</em></p>
+                </div>
+                <div class="image-content animate slide delay-5"></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+            </div>
+                <div class="text">
+                    <img class="inset" src="{{ url_for('static', filename='images/brainware-logo.png') }}" alt="" />
+                    <p>
+                        As a developer, I've crafted a versatile web app combining data preparation, machine learning, and a user-friendly Flask interface. Here's the breakdown:
+                      </p>
+                      
+                      <p>
+                        <strong>Data Prep:</strong> Employed pandas to merge CSV files (Fake.csv and True.csv) into a DataFrame, assigning labels (0 for fake, 1 for true). Leveraged NLTK for text preprocessing, including tokenization, lowercase conversion, and stopwords removal.
+                      </p>
+                      
+                      <p>
+                        <strong>ML Model:</strong> Split dataset, using TfidfVectorizer for text-to-number conversion, and trained a Multinomial Naive Bayes model on transformed data.
+                      </p>
+                      
+                      <p>
+                        <strong>Flask Web App:</strong> Established routes for main, input, about, and contact pages. Implemented classification for user input (/classify).
+                      </p>
+                      
+                      <p>
+                        <strong>Work Section:</strong> Added potential for project showcase with a new route (/work) and template (work.html).
+                      </p>
+                      
+                      <p>
+                        <strong>Web Server:</strong> Ran Flask on a simple HTTP server, dynamically obtained NLTK data directory, and set up listening on port 8080.
+                      </p>
+                      
+                      <p>
+                        A versatile app uniting data science and web development, providing a seamless news classification interface and room for project showcase.
+                      </p>
+                      
+                </div>
+        </div>
+        
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
